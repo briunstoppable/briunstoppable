@@ -1,0 +1,10 @@
+﻿digraph "test_name" {rankdir=LR;style=filled;	color=lightgrey;        
+	node [shape = square, style=filled,color="primary_light_color",fontcolor=font_color,fontname=Arial];
+	label = "test_name_label";     
+	"test_name" -> "test_name_date_time";
+	"test_name" -> "test_name_result" ;
+	"test_name_result" [color="result_color"];
+	"test_name" -> "test_name_domain";
+	"test_name" -> "test_name_tags";
+		subgraph test_name_tags {node [color="primary_dk_color"];
+		"test_name_tags" -> "tag";"test_name_tags" -> "domain";}}

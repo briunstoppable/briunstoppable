@@ -1,0 +1,195 @@
+<style type="text/css">
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+    display: grid;
+    grid-template: auto / auto auto auto;
+    grid-gap: 10px;
+    background-color: #31648B;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+    display: grid;
+    grid-template: auto / auto auto auto;
+    grid-gap: 10px;
+    background-color: #79A1C0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .grid-container {
+    border-radius: 25px;
+    display: grid;
+    grid-template: auto / auto auto auto;
+    grid-gap: 10px;
+    background-color: #31648B;
+    padding: 10px;
+  }
+
+  .grid-container>div {
+    border-radius: 25px;
+    background-color: #79A1C0;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+  }
+
+  blockquote {
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 0.8em;
+  }
+
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote p {
+    display: inline;
+  }
+</style>
+
+<h1>
+  Week 2
+</h1>
+
+<h2><i>
+    Based on the Connolly textbook, discuss some relational database terminology, especially the various keys.</i>
+</h2>
+
+<p>
+  Thanks for checking out my Week Two post. I like to use forum posts to practice HTML and CSS.
+  This week, we're talking about the different types of keys used in relational databases.
+  These 'keys' are essential for a relational system.
+  Lets explore some of these keys in more detail.
+</p>
+
+<div class="grid-container">
+  <div class="item1">
+    <h3>Primary Keys</h3>
+    <p>According to the Microsoft SQL Server developer reference, both Primary and Foreign Keys facilitate data
+      integrity. The primary key is a way to ensure uniqueness among records. Sometimes these are sequential values,
+      such as an incrementing counter. They may also be a combination of two values, such as Vendor ID and Product ID
+      (VID/PID) or Serial Number and Model Number. In Microsoft SQL Server, a Primary Key can be comprised of up to 16
+      columns. Combined-column primary keys are also referred to as Composite Keys.</p>
+    <p>The primary key can also be thought of as an index value. The primary key will not repeat, but other columns can
+      have repetitive data.
+    </p>
+  </div>
+
+  <div class="item2">
+    <h3>Foregin Keys</h3>
+    <p>Let's look at MariaDB's developer reference and see how Foreign Keys are used. These keys are used to ensure
+      referential integrity. The reference eloquently suggests that a foreign key is
+    </p>
+    <blockquote>...a primary key in a foreign table.</blockquote>
+    <p>
+      When the Foreign key is defined, if one of the People are removed, the associated Vehicle can be deleted from with
+      a single DB statement using a concept called 'cascading delete and update'.</p>
+
+  </div>
+
+  <div class="item3">
+    <h3></h3>
+    <h4>People Table</h4>
+    <table class="tg">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Malcolm Fitzcarraldo</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Brock Samson</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rusty Venture</td>
+      </tr>
+    </table>
+
+    <h4>Vehicle Table</h4>
+    <table class="tg">
+      <tr>
+        <th>People ID</th>
+        <th>Vehicle</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Nissan Stanza</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Dodge Charger</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>X1</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div class="item4">
+    <p>
+      <h3>Other Keys</h3>
+      Foreign and Primary Keys are by far the most common. But there are other types of Keys that have stricter
+      definitions, such as Candidate, Super/Composite, and Alternate keys.
+    </p>
+  </div>
+
+  <div class="item5">
+
+    <p>
+      Candidate Keys are another unique field respective to a record but does not refer to any specific data.
+
+      Alternate Keys are essentially a secondary key. Consider a table that contains both a unique Student ID, and the Student's Email Address, or a table of MAC and IP addresses. In both cases, a duplicate value would cause a data integrity issue.</p>
+  </div>
+
+  <div class="item6">
+    <h3>Question for the Class</h3>
+    <p>Given these definitions, and the various Join statements as well, the question I pose to my classmates is:
+      Suppose we wanted to join the Vehicle to the People in the table in block 2?</p>
+  </div>
+</div>
+
+<h2>References</h2>
+<p>
+  <i>Primary and Foreign Key Constraints - SQL Server.</i> (2017). Docs.microsoft.com. Retrieved 11 June 2019, from
+  https://docs.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-2017
+</p>
+
+<p>
+  <i>Relational Databases: Foreign Keys. </i> (2019). MariaDB KnowledgeBase. Retrieved 12 June 2019, from
+  https://mariadb.com/kb/en/library/relational-databases-foreign-keys/
+</p>
+
+<h2>Additional Resources</h2>
+<p>
+  W3.CSS </br>
+  Palleton </br>
+  Chris Coyier, CSS Tricks (Blockquote CSS) </br>
+</p>

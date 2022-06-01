@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+    <name>MASSTESTING</name>
+	<SSIDConfig>
+		<SSID>
+			<name>MASSTESTING</name>
+		</SSID>
+	</SSIDConfig>
+	<connectionType>ESS</connectionType>
+	<connectionMode>auto</connectionMode>
+	<MSM>
+		<security>
+			<authEncryption>
+				<authentication>WPA2PSK</authentication>
+				<encryption>AES</encryption>
+			</authEncryption>
+			<sharedKey>
+				<keyType>passPhrase</keyType>
+				<protected>false</protected>
+				<keyMaterial>343F04B7FD624E3686D951CD3AA7FB67AA72FF7CB27E400D8506E93018A3260</keyMaterial>
+			</sharedKey>
+		</security>
+	</MSM>
+</WLANProfile>

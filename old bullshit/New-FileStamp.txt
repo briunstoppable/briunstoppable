@@ -1,0 +1,10 @@
+# New-FileStamp
+Param(
+    [string]$InputFile,
+    [switch]$Watermark
+)
+
+# Watermark means we need to place a 50x50px semi-transparent logo on the bottom right hand corner (image only)
+If ($Watermark){
+    Set-Clip
+}

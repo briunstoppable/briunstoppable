@@ -1,0 +1,10 @@
+﻿digraph Glitch Free with Free Show {rankdir=LR;style=filled;	color=lightgrey;        
+	node [shape = square, style=filled,color="#B15DFF",fontcolor=White,fontname=Arial];
+	label = "Glitch Free with Free Show_label";     
+	"Glitch Free with Free Show" -> "Glitch Free with Free Show_040520";
+	"Glitch Free with Free Show" -> "Glitch Free with Free Show_FAIL" ;
+	"Glitch Free with Free Show_FAIL" [color="#FF6859"];
+	"Glitch Free with Free Show" -> "Glitch Free with Free Show_domain";
+	"Glitch Free with Free Show" -> "Glitch Free with Free Show_smart_automation camera graphics";
+		subgraph Glitch Free with Free Show_smart_automation camera graphics {node [color="#B15DFF"];
+		"Glitch Free with Free Show_smart_automation camera graphics" -> "smart_automation";"Glitch Free with Free Show_smart_automation camera graphics" -> "domain";}}

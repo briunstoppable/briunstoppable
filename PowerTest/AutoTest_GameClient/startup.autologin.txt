@@ -1,0 +1,29 @@
+;
+;	Startup Command File
+;
+;  If no startup.txt command file exists, the default behavior of
+; startup.exe will be to copy out the contents of the "update" folder
+; and then launch L3.exe out of the Session folder.
+;
+;  If a startup.txt file does exist, then only the commands provided
+; will be executed in order with the exception of the *LAUNCH command
+; which will always take place at the end.
+;
+; Commands options:
+;
+; *UPDATE [MOVE|COPY]
+; 
+; *MOVE <source file> <dest file>
+;     - moves a file from one location to another
+;
+; *COPY <source file> <dest file>
+;     - copies a file from one location to another (always overwrites)
+;
+; *PAUSE <milliseconds>
+;     - delays before executing the next command
+;
+*EXEC "c:\program files\planetbingo\Session\startup.cmd"
+*EXEC reg import "c:\program files\planetbingo\Session\HungAppTimeOut.reg"
+*UPDATE
+*EXEC PowerShell.exe -WindowStyle hidden -NoLogo -ExecutionPolicy unrestricted -File "C:\Program Files\PlanetBingo\Session\testAutoGameClient.ps1"
+*LAUNCH

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>psymbiance</h2>
+
+<p id="text_container"></p>
+
+<script>
+var txt = '{"name":"John", "age":30, "city":"New York"}'
+var obj = JSON.parse(txt);
+document.getElementById("text_container").innerHTML = obj.name + ", " + obj.age;
+</script>
+
+</body>
+</html>
